@@ -14,6 +14,7 @@ js/render.js      UI strings (ID + EN) and HTML rendering, shared with the prere
 js/main.js        language toggle, category filter, detail dialog
 tools/prerender.js optional: bakes the list into index.html for visitors without JS
 icons/            512 px app icons (PNG)
+privacy/          optional public privacy-policy pages
 favicon.svg
 .nojekyll         tells GitHub Pages to serve files as-is
 ```
@@ -37,7 +38,8 @@ Preview locally: `python3 -m http.server` in this folder, then open http://local
      testingEnabled: false,
      short: { id: "Satu kalimat.", en: "One sentence." },
      long:  { id: "Paragraf lebih panjang.", en: "A longer paragraph." },
-     notice: { id: "Catatan penting (opsional).", en: "Important caveat (optional)." }
+     notice: { id: "Catatan penting (opsional).", en: "Important caveat (optional)." },
+     privacyUrl: "privacy/my-app.html"  // optional; omit until the page exists
    }
    ```
 
@@ -76,7 +78,7 @@ override it. Run `node tools/prerender.js` afterwards to update the no-JS copy.
 - No promo or reviewer codes, keystore details, SHA fingerprints, or prices
   (say "sekali beli" / "one-time purchase").
 - No Play Store production links until an app is actually in production.
-- No privacy-policy links until the URL has been checked to load.
+- No privacy-policy links until the page exists on this site or the URL has been checked to load. Set `privacyUrl` (relative path) when you add a page under `privacy/`.
 - This site is separate from jalupublishing.com.
 
 Contact: bangjalu@gmail.com

@@ -34,6 +34,7 @@ for (const a of APPS) {
   if (!fs.existsSync(path.join(root, a.icon))) problems.push(`${a.id}: missing icon ${a.icon}`);
   for (const f of ["short", "long"]) for (const l of ["id", "en"]) if (!a[f] || !a[f][l]) problems.push(`${a.id}: missing ${f}.${l}`);
   if (!a.packageName) problems.push(`${a.id}: missing packageName`);
+  if (a.privacyUrl && !fs.existsSync(path.join(root, a.privacyUrl))) problems.push(`${a.id}: missing privacyUrl ${a.privacyUrl}`);
 }
 if (problems.length) { console.error("Problems:\n  " + problems.join("\n  ")); process.exit(1); }
 

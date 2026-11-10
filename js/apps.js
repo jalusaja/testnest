@@ -16,6 +16,7 @@
  *   notice          (optional) { id, en } important caveat shown highlighted in the detail view
  */
 window.JALU_GROUPS = [
+  { key: "game",    label: { id: "Game",                     en: "Games" } },
   { key: "docs",    label: { id: "Privasi & dokumen",       en: "Privacy & documents" } },
   { key: "work",    label: { id: "Fokus & kreator",          en: "Focus & creators" } },
   { key: "health",  label: { id: "Kesehatan",                en: "Health" } },
@@ -26,6 +27,28 @@ window.JALU_GROUPS = [
 ];
 
 window.JALU_APPS = [
+  {
+    id: "tarung-bebas",
+    name: "Tarung Bebas",
+    packageName: "com.stickninja.game",
+    icon: "icons/tarung-bebas.png",
+    group: "game",
+    badges: ["hasAds"],
+    testingEnabled: false,
+    privacyUrl: "privacy/tarung-bebas.html",
+    short: {
+      id: "Hajar, lempar & banting musuh! Game pukul-pukulan 2.5D penuh aksi.",
+      en: "Punch, throw & slam your enemies! A 2.5D beat-em-up packed with action."
+    },
+    long: {
+      id: "Jadilah petarung jalanan di Tarung Bebas. Mulai dengan tangan kosong, temukan senjata di jalan, dan hadapi gelombang musuh di 7 arena. Ada kombo tinju, uppercut, dan tendangan terbang; musuh bisa dicengkeram lalu dibanting atau dilempar. Permainannya 2.5D dengan 3 jalur: pindah jalur untuk menghindar atau mengejar, panjat tiang, pohon, tembok, atau peti, dan hancurkan penghalang. Senjata seperti pedang, pistol, bumerang, kunai, dan granat bisa dinaikkan hingga level 20; senjata spesial meliputi Drone Tempur, Laser, Bazoka, Palu Godam, dan Pedang Laser. Kartu senjata dari boss membuka senjata premium. Pilih petarung Ninja, Robot, atau Kunoichi, lalu tingkatkan HP, kekuatan, pertahanan, dan kecepatan. Ada Mode Kampanye dan Mode Tower tanpa akhir. Game ini gratis, menampilkan iklan berhadiah Google AdMob hanya jika Anda memilih menonton, dan punya pembelian dalam aplikasi lewat Google Play. Tanpa akun; progres disimpan di perangkat.",
+      en: "Be a street fighter in Tarung Bebas. Start unarmed, find weapons on the street, and face waves of enemies across 7 arenas. Combos include punches, uppercuts, and flying kicks; you can grab enemies and slam or throw them. The game is 2.5D with 3 lanes: switch lanes to dodge or chase, climb poles, trees, walls, or crates, and smash obstacles. Weapons such as the sword, pistol, boomerang, kunai, and grenade can be upgraded to level 20; special weapons include Combat Drone, Laser, Bazooka, Sledgehammer, and Laser Sword. Weapon cards from bosses unlock premium weapons. Choose a Ninja, Robot, or Kunoichi fighter and upgrade HP, strength, defense, and speed. There is a Campaign mode and an endless Tower mode. The game is free, shows Google AdMob rewarded ads only if you choose to watch them, and has in-app purchases through Google Play. No account; progress is stored on the device."
+    },
+    notice: {
+      id: "Untuk usia 13 tahun ke atas. Ada kekerasan kartun (anggota tubuh dapat terpotong, tanpa darah realistis).",
+      en: "For ages 13 and up. Includes cartoon violence (limbs can be severed, without realistic blood)."
+    }
+  },
   {
     id: "vaultread",
     name: "VaultRead",

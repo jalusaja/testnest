@@ -52,6 +52,7 @@
       "detail.join": "Jadi penguji",
       "detail.joinNote": "Membuka Google Play di tab baru. Anda bergabung dengan akun Google Anda langsung di Google Play — tidak ada formulir di situs ini.",
       "detail.privacy": "Kebijakan privasi akan tersedia di halaman Google Play aplikasi ini.",
+      "detail.privacyLink": "Baca kebijakan privasi",
       "detail.newTab": "(tab baru)",
       "testing.kicker": "Uji tertutup",
       "testing.title": "Jadi penguji",
@@ -111,6 +112,7 @@
       "detail.join": "Become a tester",
       "detail.joinNote": "Opens Google Play in a new tab. You join with your Google account directly on Google Play — there is no form on this site.",
       "detail.privacy": "A privacy policy will be available on this app's Google Play page.",
+      "detail.privacyLink": "Read the privacy policy",
       "detail.newTab": "(new tab)",
       "testing.kicker": "Closed testing",
       "testing.title": "Become a tester",
@@ -182,12 +184,15 @@
   function detailBodyHtml(app, lang) {
     var notice = app.notice ? '<p class="notice"><strong>' + esc(t(lang, "detail.important")) + ":</strong> " + esc(pick(app.notice, lang)) + "</p>" : "";
     var playTitle = app.playTitle ? '<div><dt>' + esc(t(lang, "detail.playTitle")) + "</dt><dd>" + esc(app.playTitle) + "</dd></div>" : "";
+    var privacy = app.privacyUrl
+      ? '<p class="privacy-note"><a href="' + esc(app.privacyUrl) + '">' + esc(t(lang, "detail.privacyLink")) + "</a></p>"
+      : '<p class="privacy-note">' + esc(t(lang, "detail.privacy")) + "</p>";
     return notice +
       '<p class="detail-long">' + esc(pick(app.long, lang)) + "</p>" +
       statusHtml(app, lang) +
       '<dl class="facts">' + playTitle +
       '<div><dt>' + esc(t(lang, "detail.package")) + '</dt><dd><code>' + esc(app.packageName) + "</code></dd></div></dl>" +
-      '<p class="privacy-note">' + esc(t(lang, "detail.privacy")) + "</p>";
+      privacy;
   }
 
   function cardHtml(app, lang, index) {
