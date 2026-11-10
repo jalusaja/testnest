@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halaman tidak ditemukan — Testnest</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f1b16'/%3E%3Cpath d='M14 15h36v8.2H37.2V50h-10.4V23.2H14z' fill='%23f3ede2'/%3E%3Ccircle cx='48' cy='47' r='4.5' fill='%23c4512b'/%3E%3C/svg%3E">
+<style>
+  :root { --paper:#f3ede2; --ink:#1f1b16; --ink-2:#463f36; --accent:#a9411d; }
+  @media (prefers-color-scheme: dark) { :root { --paper:#1a1713; --ink:#f1ebdf; --ink-2:#d2c8b7; --accent:#e3825a; } }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:grid; place-items:center; background:var(--paper); color:var(--ink);
+    font:400 1rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif; padding:2rem 1.25rem; }
+  main { max-width: 34rem; }
+  .code { font:600 .8rem/1 ui-monospace,Menlo,Consolas,monospace; letter-spacing:.12em; color:var(--ink-2); }
+  h1 { font:600 clamp(2rem,7vw,3.2rem)/1.05 "Iowan Old Style","Palatino Linotype",Palatino,"Noto Serif",Georgia,serif; margin:.8rem 0 1rem; letter-spacing:-.02em; }
+  p { color:var(--ink-2); margin:0 0 .6rem; }
+  a { color:var(--accent); font-weight:600; }
+  a:focus-visible { outline:2.5px solid var(--accent); outline-offset:3px; border-radius:4px; }
+  .en { margin-top:1.5rem; font-size:.95rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="code">404</p>
+  <h1>Halaman ini tidak ada.</h1>
+  <p>Mungkin tautannya salah ketik, atau halamannya sudah dipindah.</p>
+  <p><a id="home" href="/testnest/">Kembali ke Testnest</a></p>
+  <p class="en" lang="en">This page doesn't exist. <a id="home-en" href="/testnest/">Back to Testnest</a></p>
+</main>
+<script>
+  // GitHub Pages serves this file for any missing path, so a relative link would break.
+  // Point home to /testnest/ when the site lives there, otherwise to the site root.
+  (function () {
+    var base = /^\/testnest(\/|$)/.test(location.pathname) ? "/testnest/" : "/";
+    document.getElementById("home").href = base;
+    document.getElementById("home-en").href = base;
+  })();
+</script>
+</body>
+</html>
