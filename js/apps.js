@@ -23,7 +23,8 @@ window.JALU_GROUPS = [
   { key: "biz",     label: { id: "Usaha & keuangan",         en: "Business & money" } },
   { key: "led",     label: { id: "Papan LED",                en: "LED boards" } },
   { key: "kids",    label: { id: "Anak",                     en: "Kids" } },
-  { key: "util",    label: { id: "Utilitas & otomotif",      en: "Utilities & car" } }
+  { key: "util",    label: { id: "Utilitas & otomotif",      en: "Utilities & car" } },
+  { key: "soon",    label: { id: "Menyusul",                 en: "Coming soon" } }
 ];
 
 window.JALU_APPS = [
@@ -159,6 +160,29 @@ window.JALU_APPS = [
     long: {
       id: "SehatKu menghitung langkah Anda dan menyimpan catatan kesehatan. Data kesehatan yang dikumpulkan tidak dibagikan dan tidak keluar dari perangkat. Penghitung langkah butuh ponsel sungguhan (bukan emulator) dan meminta izin Aktivitas fisik (ACTIVITY_RECOGNITION).",
       en: "SehatKu counts your steps and keeps a health log. The health data it collects is not shared and does not leave the device. The step counter needs a real phone (not an emulator) and asks for the Physical activity permission (ACTIVITY_RECOGNITION)."
+    }
+  },
+  {
+    id: "merkato",
+    name: "Merkato",
+    playTitle: "Merkato POS: Inventory & Sales",
+    packageName: "com.jalu.merkato",
+    icon: "icons/merkato.png",
+    group: "biz",
+    badges: ["noAds", "onDevice"],
+    testingEnabled: true,
+    privacyUrl: "privacy/merkato.html",
+    short: {
+      id: "Aplikasi kasir offline, stok barang & laba untuk toko dan UMKM. Tanpa iklan.",
+      en: "Offline point of sale, stock and profit for small shops. No ads, no account."
+    },
+    long: {
+      id: "Merkato adalah aplikasi kasir (POS) dan pencatatan stok untuk toko, warung, kafe, dan grosir. Catat penjualan, jaga stok tetap benar, dan lihat laba sebenarnya dari HP. Bisa offline, tanpa akun, dan tanpa iklan. Ketuk produk atau scan barcode, terima berbagai metode bayar, cetak struk Bluetooth, catat pembelian dan pengeluaran, serta ekspor laporan ke PDF dan CSV. Data tersimpan di HP; cadangan ke folder pilihan Anda atau Google Drive milik Anda sendiri. Menjalankan toko gratis tanpa batas produk atau transaksi. Merkato Pro (paket tahunan atau sekali beli) menambah banyak cabang, saran belanja, margin, dan PDF bermerek.",
+      en: "Merkato is a point of sale and inventory app for small shops, stalls, cafés and wholesalers. Ring up sales, keep stock right and see your real profit, all on your phone. It works offline, needs no account and shows no ads. Tap products or scan barcodes, take several payment methods, print Bluetooth receipts, record purchases and expenses, and export reports to PDF and CSV. Everything is stored on your phone; backups go to a folder you choose or to your own Google Drive. Running your shop is free with no limits on products or sales. Merkato Pro (yearly plan or pay once for lifetime) adds multiple locations, reorder suggestions, margins and branded PDFs."
+    },
+    notice: {
+      id: "Merkato dipakai di satu HP atau tablet; belum ada sinkronisasi antarperangkat.",
+      en: "Merkato runs on one phone or tablet at a time; there is no syncing between devices."
     }
   },
   {
@@ -320,6 +344,25 @@ window.JALU_APPS = [
     }
   },
   {
+    id: "pickora",
+    name: "Pickora",
+    playTitle: "Pickora: Spin Wheel & Picker",
+    packageName: "com.jalu.pickora",
+    icon: "icons/pickora.png",
+    group: "util",
+    badges: ["noAds", "oneTime", "onDevice"],
+    testingEnabled: true,
+    privacyUrl: "privacy/pickora.html",
+    short: {
+      id: "Undian nama acak: roda putar, slide nama, laporan arisan & jam layar penuh.",
+      en: "Random name picker: spin the wheel, name slide & full-screen clock. No ads."
+    },
+    long: {
+      id: "Pickora adalah aplikasi undian nama acak untuk kelas, tim, keluarga, dan arisan. Putar roda warna-warni atau biarkan nama bergulir di layar, dan Pickora memilih secara adil siapa giliran berikutnya. Ada juga jam digital layar penuh. Tanpa iklan, tanpa akun; daftar tersimpan di HP. Versi gratis menampung hingga 25 nama. Pickora Full, sekali beli tanpa langganan, menambah hingga 500 nama per daftar dan daftar tersimpan tanpa batas, laporan pemenang PDF, tema, bunyi, dan opsi jam.",
+      en: "Pickora is a random name picker for classrooms, teams, families and savings clubs. Spin a colorful wheel or let names zoom across the screen, and Pickora fairly picks who's next. It also has a full-screen digital clock. No ads, no account; your lists stay on the phone. The free version handles up to 25 names. Pickora Full, a one-time purchase with no subscription, unlocks up to 500 names per list and unlimited saved lists, PDF winner reports, themes, sounds and clock options."
+    }
+  },
+  {
     id: "tidy",
     name: "Tidy",
     playTitle: "Tidy: Asisten Penyimpanan",
@@ -359,7 +402,7 @@ window.JALU_APPS = [
     name: "Verity",
     packageName: "com.jalu.verity",
     icon: "icons/verity.png",
-    group: "util",
+    group: "soon",
     badges: ["noAds", "oneTime"],
     testingEnabled: false,
     short: {

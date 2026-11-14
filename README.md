@@ -56,9 +56,10 @@ To add a category, add `{ key, label: { id, en } }` to `window.JALU_GROUPS`.
 
 ## Turn on the "Jadi penguji" (Become a tester) button
 
-All apps currently have `testingEnabled: false`, which shows a quiet
+Apps with `testingEnabled: false` show a quiet
 "Uji tertutup segera / Closed testing soon" note with a mailto link instead of a
-button. Before switching an app on, open
+button. Apps that are not ready to test can also be placed in the `soon` group
+("Menyusul" / "Coming soon"). Before switching an app on, open
 `https://play.google.com/apps/testing/<packageName>` in a private window and check
 that the closed-testing track really is open to anyone with the link (otherwise
 visitors get a 404).
